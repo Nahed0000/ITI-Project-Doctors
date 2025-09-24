@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(28, 85, 104, 0.5);
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+ul {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+}
+li {
+  color: black;
+  font-size: 20px;
+}
+li:hover {
+  color: lightcoral;
+}
+.container {
+  background-image: url(assets/Images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  background-size: cover;
+  padding-top: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.parent {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.child {
+  width: 25%;
+  height: 400px;
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgb(240, 237, 237);
+}
+.child img {
+  width: 80%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+.child::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -80%;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 85, 104, 0.5);
+  transition: bottom 0.5s ease;
+}
+.child:hover img {
+  transform: scale(1.5);
+}
+.child:hover::after {
+  bottom: 0;
+}
+
+h3,
+p {
+  text-align: center;
+  margin-top: 1px;
+}
+footer {
+  background-color: rgba(28, 85, 104, 0.5);
+  color: black;
+  text-align: center;
+  margin-top: 100px;
+  padding: 10px;
+}
+@media (max-width: 992px) {
+  .child {
+    width: 33.33%;
+  }
+}
+@media (max-width: 768px) {
+  .child {
+    width: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .child {
+    width: 100%;
+  }
+}
